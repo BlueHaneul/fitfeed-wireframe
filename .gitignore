@@ -1,0 +1,19 @@
+# Ignore Python files
+__pycache__/
+*.py[cod]
+*.sqlite3
+
+# Ignore virtual environments
+venv/
+env/
+
+# Ignore Django database and secrets
+db.sqlite3
+*.log
+*.pot
+*.pyc
+*.pyo
+
+# Ignore VS Code settings and macOS files
+.vscode/
+.DS_Store
