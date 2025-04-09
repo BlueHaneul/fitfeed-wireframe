@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<style>
+    .login-container {
+        max-width: 400px;
+        margin: 4rem auto;
+        background-color: white;
+        padding: 2rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+
+    .login-container img {
+        width: 100px;
+        margin-bottom: 1rem;
+    }
+
+    .form-group {
+        margin-bottom: 1.2rem;
+        text-align: left;
+    }
+
+    .form-group label {
+        display: block;
+        margin-bottom: 0.3rem;
+        font-weight: 500;
+    }
+
+    .form-group input {
+        width: 100%;
+        padding: 0.6rem;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+    }
+
+    .btn {
+        margin-top: 1rem;
+        width: 100%;
+    }
+
+    .login-title {
+        margin-bottom: 1rem;
+        color: #2e7d32;
+    }
+</style>
+
+<div class="login-container">
+    <img src="https://cdn-icons-png.flaticon.com/512/3011/3011270.png" alt="Wellness Icon" style="width: 80px;">
+    <h2 class="login-title">Welcome to FitFeed</h2>
+    <form method="post">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" name="username" id="username" required>
+        </div>
+
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" required>
+        </div>
+
+        <button class="btn" type="submit">Login</button>
+    </form>
+</div>
+{% endblock %}
