@@ -12,9 +12,6 @@ This Django project is a wireframe for a student-focused wellness app that provi
 - HTML/CSS
 - Python
 
-## Screenshots
-[Insert screenshots or link to screenshots folder]
-
 ## Run locally
 ```bash
 python manage.py runserver
